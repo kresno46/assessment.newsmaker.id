@@ -10,6 +10,225 @@
     html {
       scroll-behavior: smooth;
     }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AiSG by Business Development</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      overflow-x: hidden;
+      z-index: 0;
+      background-color: #f5f7fa;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('background.jpg') center center / cover no-repeat;
+      filter: blur(4px) brightness(0.7);
+      animation: kenburns 20s ease-in-out infinite alternate;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.4));
+      z-index: -1;
+    }
+
+    @keyframes kenburns {
+      0% { transform: scale(1) translate(0,0) }
+      100% { transform: scale(1.1) translate(-2%, -2%) }
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo {
+      max-width: 120px;
+      height: auto;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    .title .aisg {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e3a8a; /* corporate dark blue */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .title .byline {
+      font-size: 1.25rem;
+      color: #e2e8f0; /* light gray-blue */
+      font-weight: 400;
+    }
+
+    .subtitle {
+      color: #ffffff;
+      text-align: center;
+      margin: 20px 0 40px;
+      font-size: 1.1rem;
+      background-color: rgba(30, 58, 138, 0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 50px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 20px;
+      font-size: 16px;
+      color: #1e3a8a;
+      background: #ffffff;
+      border: 2px solid #1e3a8a;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #e0e7ff;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn.disabled {
+      pointer-events: none;
+      opacity: 0.6;
+      background: #f1f5f9;
+      color: #94a3b8;
+      border-color: #94a3b8;
+    }
+
+    .thank-you {
+      color: #f1f5f9;
+      background-color: rgba(30, 58, 138, 0.9);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      display: none;
+    }
+
+    footer {
+      color: #ffffff;
+      margin-top: auto;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 600px) {
+      .title .aisg {
+        font-size: 2.2rem;
+      }
+
+      .title .byline {
+        font-size: 1rem;
+      }
+
+      .logo {
+        max-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="logo.png" alt="AiSG Logo" class="logo">
+  </div>
+
+  <div class="title">
+    <span class="aisg">AiSG</span>
+    <span class="byline">by: Business Development</span>
+  </div>
+
+  <div class="subtitle">Silakan pilih sesuai jabatan</div>
+
+  <div class="thank-you" id="thank-you-message">Terima kasih, Anda sudah memilih.</div>
+
+  <div class="button-container">
+    <a href="https://forms.gle/yd9kz6co1L2nhX4r6" class="btn" target="_blank">BC</a>
+    <a href="https://forms.gle/pmm628KzbrordHDKA" class="btn" target="_blank">SBC</a>
+    <a href="https://forms.gle/1pQqxGVg8eWpQdg46" class="btn" target="_blank">BSM</a>
+    <a href="https://forms.gle/F1HrrDrwUScofPpJ6" class="btn" target="_blank">SBM</a>
+    <a href="https://forms.gle/5dUJMbJoNNAYi7Lq6" class="btn" target="_blank">EM</a>
+    <a href="https://forms.gle/3gE8cReEJ6fXCFCL7" class="btn" target="_blank">SEM</a>
+    <a href="https://forms.gle/GbrFwbLmvUBFLfdc6" class="btn" target="_blank">VBM</a>
+    <a href="https://forms.gle/AeaJDU4vxPF3MQdSA" class="btn" target="_blank">BM</a>
+    <a href="https://forms.gle/fNY668mk5ZrKLVBB6" class="btn" target="_blank">CBO</a>
+  </div>
+
+  <footer>
+    &copy; 2025 AiSG - All Rights Reserved
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+    const thankYou = document.getElementById('thank-you-message');
+
+    function disableButtons() {
+      buttons.forEach(btn => {
+        btn.classList.add('disabled');
+        btn.setAttribute('tabindex', '-1');
+      });
+      thankYou.style.display = 'block';
+    }
+
+    if (localStorage.getItem('hasChosen') === 'true') {
+      disableButtons();
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        localStorage.setItem('hasChosen', 'true');
+        disableButtons();
+      });
+    });
+  </script>
+
+</body>
+</html>
 
     body {
       margin: 0;
