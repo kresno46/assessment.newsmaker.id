@@ -195,24 +195,6 @@
     const buttons = document.querySelectorAll('.btn');
     const thankYou = document.getElementById('thank-you-message');
 
-    function disableButtons() {
-      buttons.forEach(btn => {
-        btn.classList.add('disabled');
-        btn.setAttribute('tabindex', '-1');
-      });
-      thankYou.style.display = 'block';
-    }
-
-    if (localStorage.getItem('hasChosen') === 'true') {
-      disableButtons();
-    }
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        localStorage.setItem('hasChosen', 'true');
-        disableButtons();
-      });
-    });
   </script>
 
 </body>
